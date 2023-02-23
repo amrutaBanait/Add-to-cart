@@ -7,10 +7,13 @@ function ProductList({product}){
         <div className="flex">
        {
         product.map((productItem, productIndex ) =>{
-            returb(
+            return (
                 <div style={{width: "50%" }}>
                     <div>
-                        <img src = {productItem.url} />
+                        <img src = {productItem.url} width="100%"/>
+                        <p> {productItem.name} | {productItem.category} </p>
+                        <p> {productItem.seller} </p>
+                        <p> Rs. {productItem.price} /- </p>
                     </div>
                 </div>
             )
