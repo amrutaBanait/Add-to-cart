@@ -2,6 +2,7 @@ import React from 'react';
 import "./App.css";
 import Header from "./components/Header"
 import ProductList from './components/ProductList';
+import CartList from './components/CartList';
 import {useState} from "react";
 
 const App = () => {
@@ -82,6 +83,7 @@ setCart([...cart, data])
     <div>
     <Header/>
     <ProductList product={product} addToCart={addToCart}/>
+    <CartList cart={cart} />
       </div>
   )
 }
