@@ -72,10 +72,15 @@ const App = () => {
   },
   ])
 
+  const [cart, setCart] = useState([])
+
+  const addToCart = (data) =>{
+console.log(data)
+  }
   return (
     <div>
     <Header/>
-    <ProductList product={product}/>
+    <ProductList product={product} addToCart={addToCart}/>
       </div>
   )
 }
