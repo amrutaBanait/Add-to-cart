@@ -73,9 +73,10 @@ const App = () => {
   ])
 
   const [cart, setCart] = useState([])
-
+  console.log(cart);
   const addToCart = (data) =>{
-console.log(data)
+
+setCart([...cart, data])
   }
   return (
     <div>
