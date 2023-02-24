@@ -8,13 +8,19 @@ function CartList({ cart }) {
           <div>
             <img src={cartItem.url} width={50} />
             <span>{cartItem.name} </span>
-            <button>+</button>
-            <span>{cartItem.quantity}</span>
             <button>-</button>
-            <span>{cartItem.price}</span>
+            <span>{cartItem.quantity}</span>
+            <button>+</button>
+            <span>Rs. {cartItem.price}</span>
           </div>
         );
-      })}
+      })
+      }
+      <p>
+        {
+            cart.map(item => item.price).reduce((total, value) => total + value, 0)
+        }
+      </p>
     </div>
   );
 }
