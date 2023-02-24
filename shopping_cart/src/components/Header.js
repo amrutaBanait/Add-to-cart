@@ -1,12 +1,12 @@
 import React from 'react';
 import "../App.css"
 
-const Header = () => {
+const Header = (props) => {
     return (
         <div className="flex shopping-card">
           <div>Shopping Cart</div>
           <div>Cart
-            <sup>{"2"}</sup>
+            <sup>{props.count}</sup>
           </div>
           </div>
       )

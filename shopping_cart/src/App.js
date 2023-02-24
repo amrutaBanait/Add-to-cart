@@ -81,7 +81,7 @@ setCart([...cart, {...data, quantity : 1}])
   }
   return (
     <div>
-    <Header/>
+    <Header count={cart.length} />
     <ProductList product={product} addToCart={addToCart}/>
     <CartList cart={cart} />
       </div>
