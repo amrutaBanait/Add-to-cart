@@ -74,16 +74,22 @@ const App = () => {
   ])
 
   const [cart, setCart] = useState([])
-  console.log(cart);
+  const[showCart, setShowCart] = useState(false)
+ // console.log(cart);
   const addToCart = (data) =>{
 
-setCart([...cart, {...data, quantity : 1}])
+    setCart([...cart, {...data, quantity : 1}])
   }
+
   return (
     <div>
-    <Header count={cart.length} />
+    <Header count = {cart.length} />
+    {
+      showCart ?
+      <CartList cart = {cart} /> :
     <ProductList product={product} addToCart={addToCart}/>
-    <CartList cart={cart} />
+    }
+
       </div>
   )
 }
