@@ -5,7 +5,7 @@ const Header = (props) => {
     return (
         <div className="flex shopping-card">
           <div>Shopping Cart</div>
-          <div>Cart
+          <div onClick = {()=> props.setShowCart(false)}>Cart
             <sup>{props.count}</sup>
           </div>
           </div>
