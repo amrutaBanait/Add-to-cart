@@ -77,7 +77,7 @@ const App = () => {
   console.log(cart);
   const addToCart = (data) =>{
 
-setCart([...cart, data])
+setCart([...cart, {...data, quantity : 1}])
   }
   return (
     <div>
