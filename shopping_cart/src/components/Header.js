@@ -4,8 +4,8 @@ import "../App.css"
 const Header = (props) => {
     return (
         <div className="flex shopping-card">
-          <div>Shopping Cart</div>
-          <div onClick = {()=> props.setShowCart(false)}>Cart
+          <div onClick = {()=> props.handleShow(true)}>Shopping Cart</div>
+          <div onClick = {()=> props.handleShow(false)}>Cart
             <sup>{props.count}</sup>
           </div>
           </div>
