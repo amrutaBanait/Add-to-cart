@@ -10,21 +10,22 @@ function CartList({ cart }) {
 
   return (
     <div>
-      {cart.map((cartItem, cartIndex) => {
+      {
+     CART?.map((cartItem, cartindex) => {
         return (
           <div>
-            <img src={cartItem.url} width={50} />
+            <img src={cartItem.url} width={40} />
             <span>{cartItem.name} </span>
             <button>-</button>
             <span>{cartItem.quantity}</span>
             <button
-            onClick ={ ()=>{
-                const _CART = CART.map((item, index)=>{
-                    return cartindex === index ? { ...item, quantity : item.quantity + 1} : item
-                })
-                setCART(_CART)
-            }}
-            >+</button>
+                                onClick={() => {
+                                    const _CART = CART.map((item, index) => {
+                                        return cartindex === index ? { ...item, quantity: item.quantity + 1 } : item
+                                    })
+                                    setCART(_CART)
+                                }}
+                            >+</button>
             <span>Rs. {cartItem.price * cartItem.quantity}</span>
           </div>
         );
