@@ -16,7 +16,14 @@ function CartList({ cart }) {
           <div>
             <img src={cartItem.url} width={40} />
             <span>{cartItem.name} </span>
-            <button>-</button>
+            <button
+            onClick ={ () =>{
+              const _CART = CART.map((item, index) =>{
+                return cartindex === index ? { ...item, quantity : item.quantity - 1} : item
+              })
+              setCART (_CART)
+            }}
+            >-</button>
             <span>{cartItem.quantity}</span>
             <button
                                 onClick={() => {
