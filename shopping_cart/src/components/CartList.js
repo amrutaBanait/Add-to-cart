@@ -14,7 +14,7 @@ function CartList({ cart }) {
         return (
           <div>
             <img src={cartItem.url} width={70} />
-            <span>{cartItem.name} </span>
+            <span className="name">{cartItem.name} </span>
             <button
              className="add btn"
               onClick={() => {
@@ -49,8 +49,8 @@ function CartList({ cart }) {
           </div>
         );
       })}
-      <p>
-        Total: <span></span>
+      <p className="total">
+        Total: 
         {CART.map((item) => item.price * item.quantity).reduce(
           (total, value) => total + value,
           0
