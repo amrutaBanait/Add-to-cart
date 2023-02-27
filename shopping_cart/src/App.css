@@ -2,6 +2,7 @@
 .flex{
   display:flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .shopping-card{
   justify-content: space-between;
@@ -9,5 +10,17 @@
   padding:20px 30px;
 }
 .product-item{
+  padding:10px;
+ margin-top: 5px;
+}
+.product{
+ margin-left: 40px;
+}
+.btn{
+  padding:10px;
+  background-color:black;
+color:white;
+}
+.add btn{
   padding:10px;
 }
